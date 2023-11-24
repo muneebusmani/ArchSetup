@@ -1,7 +1,6 @@
 #!/bin/bash
 cd ~ 
-sudo pacman -Syyuu git base-devel
-pacman -S --needed git base-devel 
+sudo pacman -Syyuu git base-devel wpa_supplicant bluez
 git clone https://aur.archlinux.org/yay.git
 cd yay 
 makepkg -si
@@ -9,7 +8,7 @@ makepkg -si
 cd ~ 
 yay -Syyuu zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-yay -S --noconfirm zsh-theme-powerlevel10k-git 
+yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 cd ~
